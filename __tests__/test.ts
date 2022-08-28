@@ -1,4 +1,4 @@
-import {isArray, isNil, join} from '../index';
+import {isArray, isNil, join} from '../src';
 
 test('isNil function', () => {
   expect(isNil(null)).toBeTruthy();
