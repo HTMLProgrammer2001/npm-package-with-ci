@@ -1,12 +1,15 @@
 {
-  "name": "my-lodash",
-  "version": "1.0.1",
+  "name": "@htmlprogrammer/my-lodash",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json"
+  },
+  "bin": {
+    "log-hello": "./lib/bin.js"
   },
   "repository": {
     "type": "git",

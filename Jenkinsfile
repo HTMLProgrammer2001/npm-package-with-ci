@@ -17,10 +17,17 @@ spec:
         }
     }
     stages {
+        stage('Configure') {
+            steps {
+                withCredentials([file(credentialsId: 'my-lodash-npm-config', variable: 'npm_config')]) {
+                    writeFile file: '.npmrc', text: readFile(npm_config)
+                }
+            }
+        }
         stage('Install') {
             steps {
                 sh 'npm config set legacy-peer-deps true'
-                sh 'npm install --registry https://registry.npmjs.org'
+                sh 'npm install'
             }
         }
         stage('Test') {
