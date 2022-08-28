@@ -19,6 +19,7 @@ spec:
     stages {
         stage('Install') {
             steps {
+                sh 'npm config set legacy-peer-deps true'
                 sh 'npm install --registry https://registry.npmjs.org'
             }
         }
