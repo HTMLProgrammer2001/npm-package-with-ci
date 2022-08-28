@@ -19,7 +19,7 @@ spec:
     stages {
         stage('Install') {
             steps {
-                sh 'npm install'
+                sh 'npm install --registry https://registry.npmjs.org'
             }
         }
         stage('Test') {
